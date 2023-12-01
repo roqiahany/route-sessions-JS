@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container py-4">
+      <label for="ProductName" class="fw-bold text-danger">
+        ProductName :</label
+      >
+      <input type="text" class="form-control mb-3" id="ProductName" />
+
+      <label class="fw-bold text-danger" for="ProductPrice">
+        ProductPrice :</label
+      >
+      <input type="number" class="form-control mb-3" id="ProductPrice" />
+
+      <label class="fw-bold text-danger" for="ProductCategory">
+        ProductCategory :</label
+      >
+      <input type="text" class="form-control mb-3" id="ProductCategory" />
+
+      <label class="fw-bold text-danger" for="ProductDesc">
+        ProductDesc :</label
+      >
+      <textarea
+        type="text"
+        class="form-control mb-3"
+        id="ProductDesc"
+      ></textarea>
+
+      <button
+        onclick=" getProduct() "
+        class="btn d-block btn-info w-100"
+        id="addBtn"
+        href="#"
+      >
+        Add product
+      </button>
+      <button class="btn btn-warning mt-3 d-none w-100" href="#" id="updateBtn">
+        Update product
+      </button>
+    </div>
+    <!-- text-center  -->
+    <div class="mx-auto my-3 w-75">
+      <!-- this بتشاور على العنصر كله اللى هيحصل عليه الحدث يعنى الانبت هو العنصر و الحدث هو الاونانبت  -->
+      <input
+        type="search"
+        oninput="searchProducts(this.value)"
+        placeholder="Search by name ..."
+        class="w-75 mx-auto my-5 form-control"
+      />
+
+      <table
+        class="table table-group-divider table-bordered table-striped-columns text-center"
+      >
+        <thead>
+          <th class="px-5 py-4 text-success">Name</th>
+          <th class="px-5 py-4 text-success">Price</th>
+          <th class="px-5 py-4 text-success">Category</th>
+          <th class="px-5 py-4 text-success">Desc</th>
+          <th class="px-5 py-4 text-success" onclick="setFormBtn()">Update</th>
+          <th class="px-5 py-4 text-success">Delete</th>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/crud.js"></script>
+  </body>
+</html>

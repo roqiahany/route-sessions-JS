@@ -1,0 +1,11 @@
+div {
+  background-color: aqua;
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
